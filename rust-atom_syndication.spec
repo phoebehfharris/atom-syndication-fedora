@@ -5,7 +5,7 @@
 %global crate atom_syndication
 
 Name:           rust-atom_syndication
-Version:        0.12.7
+Version:        0.12.10
 Release:        %autorelease
 Summary:        Library for serializing the Atom web content syndication format
 
@@ -71,18 +71,6 @@ This package contains library source intended for building other packages which
 use the "derive_builder" feature of the "%{crate}" crate.
 
 %files       -n %{name}+derive_builder-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+never-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+never-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "never" feature of the "%{crate}" crate.
-
-%files       -n %{name}+never-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+serde-devel
